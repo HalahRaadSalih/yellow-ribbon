@@ -6,12 +6,18 @@ var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var port            = process.env.PORT || 8000;
 
+
+app.use(express.static('client'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':true}));
 app.use(bodyParser.json());
-app.use(bodyParser.json({type: 'application/vnd.api+json'}));
-app.use(methodOverride());
-app.use('/client', express.static(path.join(__dirname, '../client')));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+// app.use(bodyParser.json({type: 'application/vnd.api+json'}));
+// app.use(methodOverride());
 
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '../client/views', 'index.html'));

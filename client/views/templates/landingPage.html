@@ -1,0 +1,72 @@
+<div id="landingHolder">
+  <div id="landing-bg">
+    <h1>WORDS HERE</h1>
+  </div>
+</div>
+<div class="card-panel">
+	<div class="partition">
+		<h4>About</h4>
+	</div>
+	<div class="row">
+		<div class="col m8 s8 container">
+			<h5>hello</h5>
+			<p>Street art occupy leggings mumblecore etsy hammock. Dreamcatcher franzen everyday carry, health goth master cleanse pabst man braid schlitz man bun street art. Thundercats meggings deep v, ethical man bun mlkshk keffiyeh. Cold-pressed shoreditch kale chips irony, brunch paleo selfies church-key flexitarian dreamcatcher. Tattooed quinoa cardigan bicycle rights tumblr, pug ramps. Distillery franzen etsy, letterpress chambray single-origin coffee iPhone small batch squid shoreditch. Meditation poutine tilde pinterest, roof party kogi tumblr yuccie cardigan.</p>
+		</div>
+		<div class="col m4 s8">
+			<div class="row">
+				<div class="col s3">
+					<p></p>
+				</div>
+				<div class="col s9">
+					<img class="responsive-img" src="https://placebear.com/230/230">
+				</div>
+			</div>
+		</div>
+		<div class="col m8 s8 container">
+			<h5>hello</h5>
+			<p>Street art occupy leggings mumblecore etsy hammock. Dreamcatcher franzen everyday carry, health goth master cleanse pabst man braid schlitz man bun street art. Thundercats meggings deep v, ethical man bun mlkshk keffiyeh. Cold-pressed shoreditch kale chips irony, brunch paleo selfies church-key flexitarian dreamcatcher. Tattooed quinoa cardigan bicycle rights tumblr, pug ramps. Distillery franzen etsy, letterpress chambray single-origin coffee iPhone small batch squid shoreditch. Meditation poutine tilde pinterest, roof party kogi tumblr yuccie cardigan.</p>
+		</div>
+		<div class="col m4 s8">
+			<div class="row">
+				<div class="col s3">
+					<p></p>
+				</div>
+				<div class="col s9">
+					<img class="responsive-img" src="https://placebear.com/230/230">
+				</div>
+			</div>
+		</div>
+		<div class="col m8 s8 container">
+			<h5>hello</h5>
+			<p>Street art occupy leggings mumblecore etsy hammock. Dreamcatcher franzen everyday carry, health goth master cleanse pabst man braid schlitz man bun street art. Thundercats meggings deep v, ethical man bun mlkshk keffiyeh. Cold-pressed shoreditch kale chips irony, brunch paleo selfies church-key flexitarian dreamcatcher. Tattooed quinoa cardigan bicycle rights tumblr, pug ramps. Distillery franzen etsy, letterpress chambray single-origin coffee iPhone small batch squid shoreditch. Meditation poutine tilde pinterest, roof party kogi tumblr yuccie cardigan.</p>
+		</div>
+		<div class="col m4 s8">
+			<div class="row">
+				<div class="col s3">
+					<p></p>
+				</div>
+				<div class="col s9">
+					<img class="responsive-img" src="https://placebear.com/230/230">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="partition">
+		<h4>Top Posts</h4>
+	</div>
+	<div class="row posts-container">	
+		<div ng-repeat="item in topPosts">
+			<div class="col s12">
+				<div class="card-panel add-padding">
+					<div class="content">
+						<h4>{{item.title}}</h4>
+						<p>{{item.body}}</p>
+						<br>
+						<p></span>Posted: <span am-time-ago="item.postedAt | amParse:'YYYY.MM.DD HH:mm:ss'"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
