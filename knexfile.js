@@ -3,9 +3,9 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      database: 'yrusers'
+      database: 'yellribb'
     }
   },
 
@@ -27,6 +27,7 @@ module.exports = {
 
   production: {
     client: 'postgresql',
+    connection: process.env.DATABASE_URL,
     connection: {
     },
     pool: {
