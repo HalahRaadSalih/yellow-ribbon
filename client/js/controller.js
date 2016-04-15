@@ -21,10 +21,12 @@ myApp.controller('landingPageCtrl', function($scope, $http){
 	}]
 });
 
-Myapp.controller('FormCtrl', function($scope, $http){
-	
+myApp.controller('FormCtrl', function($scope, $http){
+	$http.get('../public/json/sd-mtbi.json').then(function(data) {
+		$scope.mtbiQuestions = data
+	})
 });
 
-Myapp.controller('PostsCtrl', function(){
+myApp.controller('PostsCtrl', function(){
 
 });

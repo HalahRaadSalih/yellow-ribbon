@@ -3,8 +3,8 @@
 		<form class="col s12">
 		      <div class="row">
 		        <div class="input-field col s12">
+		        	<label for="userName">User Name</label>
 		          <input id="userName" type="text">
-		          <label for="userName">User Name</label>
 		        </div>
 		      </div>
 		      <div class="row">
@@ -19,26 +19,19 @@
 		          <label for="email">Email</label>
 		        </div>
 		      </div>
-		      <div class="row">
-	          <form class="col s12">
-	            <div class="row">
-	              <div class="input-field col s12">
-	                <textarea id="textarea1" class="materialize-textarea"></textarea>
-	                <label for="textarea1">{{}}</label>
-	              </div>
-	            </div>
-	          </form>
-	        </div>
-		      <div class="row">
-		          <form class="col s12">
-		            <div class="row">
-		              <div class="input-field col s12">
-		                <textarea id="textarea1" class="materialize-textarea"></textarea>
-		                <label for="textarea1">Textarea</label>
-		              </div>
-		            </div>
-		          </form>
-		        </div>
+		      <div ng-repeat="item in mtbiQuestions.data">
+		      	<div class="row">
+		      	    <form class="col s12">
+		      	      <div class="row">
+		      	        <div class="input-field col s12">
+		      	        	<h6 for="textarea1">{{item.Question}}</h6>
+		      	        	<br><br><br>
+		      	          <textarea id="textarea{{item.Question_id}}" class="materialize-textarea"></textarea>
+		      	        </div>
+		      	      </div>
+		      	    </form>
+		      	  </div>
+		      </div>
 		    </form>
 		  </div>
 	</div>
