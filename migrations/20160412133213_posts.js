@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
     table.integer('user_id').unsigned().index().references('id').inTable('users');
   });
 };
-
+ 
 exports.down = function(knex, Promise) {
     return knex.schema.dropTable('posts');
 };
