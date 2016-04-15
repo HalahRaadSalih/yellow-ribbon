@@ -6,4 +6,9 @@ myApp.config(function($routeProvider) {
 		templateUrl: '/views/templates/landingPage.html',
 		controller: 'landingPageCtrl'
 	})
+	.when('/form', {
+		templateUrl: '/views/templates/intro-questions.html',
+		controller: 'FormCtrl'
+	})
+	
 })
