@@ -1,4 +1,4 @@
-myApp.controller('landingPageCtrl', function($scope, $http){
+myApp.controller('LandingController', function($scope, $http){
 	// Each Post should have a raiting and a
 	$scope.topPosts = [{
 		username: false,
@@ -21,12 +21,16 @@ myApp.controller('landingPageCtrl', function($scope, $http){
 	}]
 });
 
-myApp.controller('FormCtrl', function($scope, $http){
+myApp.controller('FormController', function($scope, $http){
 	$http.get('../public/json/sd-mtbi.json').then(function(data) {
 		$scope.mtbiQuestions = data
 	})
 });
 
-myApp.controller('PostsCtrl', function(){
+myApp.controller('SigningController', function($scope){
+	$scope.title = "Sign In/ Sign Out"
+});
+
+myApp.controller('PostingController', function(){
 
 });
