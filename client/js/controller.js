@@ -28,21 +28,16 @@ myApp.controller('FormController', function($scope, $http){
 });
 
 myApp.controller('SigninController', function($scope, $location){
-	$scope.title = "Sign In"
+	$scope.title = "Sign In";
 	$scope.errors = "";
 
-	// $scope.signin = function() {
-	// 	UserService.login($scope.user).then(function(data) {
-	// 		UserService.setCurrentUser(data);
-	// 		$location.path("/home");
-	// 	}).catch(function(data) {
-	// 		$scope.errors  = data.data;
-	// 	});
-	// }
+	$scope.signin = function() {
+		$location.path("/home");
+	}
 });
 
 myApp.controller('SignupController', function($scope, $location){
-	$scope.title = "Sign Up"
+	$scope.title = "Sign Up";
     $scope.errors = "";
 
 	// $scope.signup = function() {
@@ -61,10 +56,34 @@ myApp.controller('SignupController', function($scope, $location){
 	// }
 });
 
-myApp.controller('HomeController', function($scope){
-	$scope.title = "Home"
+myApp.controller('HomeController', function($scope, $location){
+	$scope.title = "Home";
 });
 
 myApp.controller('PostingController', function(){
 
 });
+
+
+//
+// ANIMATION
+//
+app.animation('.slide', [function() {
+    return {
+        // make note that other events (like addClass/removeClass)
+        // have different function input parameters
+        enter: function(element, doneFn) {
+        jQuery(element).slideDown(1000, doneFn)
+        // remember to call doneFn so that angular
+        // knows that the animation has concluded
+        },
+
+        move: function(element, doneFn) {
+        jQuery(element).fadeIn(1000, doneFn);
+        },
+
+        leave: function(element, doneFn) {
+        jQuery(element).slideUp(1000, doneFn)
+        }
+    }
+}]);

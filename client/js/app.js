@@ -18,6 +18,14 @@ myApp.config(function($routeProvider) {
 		templateUrl: '/views/templates/home.html',
 		controller: 'HomeController'
 	})
+	.when('/home/ptsd-forum', {
+		templateUrl: '/views/templates/ptsd-forum.html',
+		controller: 'PtsdController'
+	})
+	.when('/home/mtbi-forum', {
+		templateUrl: '/views/templates/mtbi-forum.html',
+		controller: 'MtbiController'
+	})
 	.when('/form', {
 		templateUrl: '/views/templates/intro-questions.html',
 		controller: 'FormController'
