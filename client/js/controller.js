@@ -27,8 +27,41 @@ myApp.controller('FormController', function($scope, $http){
 	})
 });
 
-myApp.controller('SigningController', function($scope){
+myApp.controller('SigninController', function($scope){
 	$scope.title = "Sign In/ Sign Out"
+	$scope.errors = "";
+
+	$scope.login = function() {
+		UserService.login($scope.user).then(function(data) {
+			UserService.setCurrentUser(data);
+			$location.path("/dashboard");
+		}).catch(function(data) {
+			$scope.errors  = data.data;
+		});
+	}
+});
+
+myApp.controller('SignupController', function($scope, UserService, $location){
+    $scope.errors = "";
+
+	$scope.signup = function() {
+		if ($scope.user.password !== $scope.user.confirm) {
+			$scope.errors = "Passwords do not match.";
+		} else {
+			UserService.signup($scope.user).then(function(data) {
+				UserService.setCurrentUser(data);
+				$location.path('/dashboard');
+			}).catch(function(data) {
+				$scope.errors = data.data;
+				$scope.user.password = "";
+				$scope.user.confirm = "";
+			});
+		}
+	}
+});
+
+myApp.controller('HomeController', function($scope){
+	$scope.title = "Home"
 });
 
 myApp.controller('PostingController', function(){

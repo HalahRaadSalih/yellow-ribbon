@@ -6,13 +6,23 @@ myApp.config(function($routeProvider) {
 		templateUrl: '/views/templates/landing.html',
 		controller: 'LandingController'
 	})
-	.when('/signing', {
-		templateUrl: '/views/templates/signing.html',
-		controller: 'SigningController'
+	.when('/signin', {
+		templateUrl: '/views/templates/signin.html',
+		controller: 'SigninController'
+	})
+	.when('/signup', {
+		templateUrl: '/views/templates/signup.html',
+		controller: 'SignupController'
+	})
+	.when('/home', {
+		templateUrl: '/views/templates/home.html',
+		controller: 'HomeController'
 	})
 	.when('/form', {
 		templateUrl: '/views/templates/intro-questions.html',
 		controller: 'FormController'
 	})
-
+	.otherwise({
+      redirectTo: "/"
+    });
 })
