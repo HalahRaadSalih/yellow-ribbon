@@ -131,6 +131,6 @@ myApp.controller('PtsdController', function($scope){
     $scope.sortReverse  = true;
 });
 
-myApp.controller('MtbiController', function(){
-
+myApp.controller('MtbiController', function($scope){
+    $scope.title = "mTBI Forum";
 })
