@@ -1,11 +1,12 @@
-var router = express.Router();
-var knex = require('../../db/knex');
+var express = require('express');
+var router  = express.Router();
+var knex    = require('../../db/knex');
 
 // -------------------------------
 // SIGN UP -----------------------
 // -------------------------------
 router.post('/signup', function(req, res){
-    knex('users').where({ username: req.body.username }).first().then(funcion(user){
+    knex('users').where({ username: req.body.username }).first().then(function(user){
         if(user){
             return res.status(400).send('Username already exist');
         } else {
@@ -29,7 +30,7 @@ router.post('/signup', function(req, res){
 // SIGN IN -----------------------
 // -------------------------------
 router.post('/signin', function(req, res){
-    knex('users').where({ username: req.body.username }).first().then(funcion(user){
+    knex('users').where({ username: req.body.username }).first().then(function(user){
         if(user){
             res.cookie('userID', user.id, { signed: true });
             res.redirect('/');
@@ -39,3 +40,5 @@ router.post('/signin', function(req, res){
 
     });
 });
+
+module.exports = router;

@@ -23,7 +23,7 @@ myApp.controller('LandingController', function($scope, $http){
 
 myApp.controller('FormController', function($scope, $http){
 	$http.get('../public/json/sd-mtbi.json').then(function(data) {
-		$scope.mtbiQuestions = data
+		$scope.mtbiQuestions = data;
 	})
 });
 

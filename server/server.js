@@ -6,6 +6,7 @@ var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var port            = process.env.PORT || 8000;
 
+var authRoutes      = require('./controllers/auth');
 
 app.use(express.static('client'));
 app.use(morgan('dev'));
@@ -18,6 +19,7 @@ app.use(function(req, res, next) {
 });
 // app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 // app.use(methodOverride());
+app.use('/auth', authRoutes);
 
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '../client/views', 'index.html'));
@@ -25,4 +27,4 @@ app.get('/', function(req, res){
 
 app.listen(port, function(){
     console.log("listening on port: " + port);
-})
+});
