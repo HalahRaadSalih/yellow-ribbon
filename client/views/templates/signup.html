@@ -3,13 +3,18 @@
     <p ng-show="errors" class="has-error">
         {{errors}}
     </p>
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username" ng-model="user.username" required>
-        <label for="username">Password</label>
-        <input type="password" class="form-control" name="password" placeholder="Password" ng-model="user.password" required>
-        <label for="username">Confirm Password</label>
-        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password" ng-model="user.confirm" required>
+
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" ng-model="user.username" required>
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password" ng-model="user.password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password" ng-model="user.confirm" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
