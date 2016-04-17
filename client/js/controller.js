@@ -27,38 +27,38 @@ myApp.controller('FormController', function($scope, $http){
 	})
 });
 
-myApp.controller('SigninController', function($scope, UserService, $location){
+myApp.controller('SigninController', function($scope, $location){
 	$scope.title = "Sign In"
 	$scope.errors = "";
 
-	$scope.login = function() {
-		UserService.login($scope.user).then(function(data) {
-			UserService.setCurrentUser(data);
-			$location.path("/home");
-		}).catch(function(data) {
-			$scope.errors  = data.data;
-		});
-	}
+	// $scope.signin = function() {
+	// 	UserService.login($scope.user).then(function(data) {
+	// 		UserService.setCurrentUser(data);
+	// 		$location.path("/home");
+	// 	}).catch(function(data) {
+	// 		$scope.errors  = data.data;
+	// 	});
+	// }
 });
 
-myApp.controller('SignupController', function($scope, UserService, $location){
+myApp.controller('SignupController', function($scope, $location){
 	$scope.title = "Sign Up"
     $scope.errors = "";
 
-	$scope.signup = function() {
-		if ($scope.user.password !== $scope.user.confirm) {
-			$scope.errors = "Password doesn't match";
-		} else {
-			UserService.signup($scope.user).then(function(data) {
-				UserService.setCurrentUser(data);
-				$location.path('/home');
-			}).catch(function(data) {
-				$scope.errors = data.data;
-				$scope.user.password = "";
-				$scope.user.confirm = "";
-			});
-		}
-	}
+	// $scope.signup = function() {
+	// 	if ($scope.user.password !== $scope.user.confirm) {
+	// 		$scope.errors = "Password doesn't match";
+	// 	} else {
+	// 		UserService.signup($scope.user).then(function(data) {
+	// 			UserService.setCurrentUser(data);
+	// 			$location.path('/home');
+	// 		}).catch(function(data) {
+	// 			$scope.errors = data.data;
+	// 			$scope.user.password = "";
+	// 			$scope.user.confirm = "";
+	// 		});
+	// 	}
+	// }
 });
 
 myApp.controller('HomeController', function($scope){
