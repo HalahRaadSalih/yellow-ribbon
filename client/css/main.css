@@ -41,7 +41,10 @@ div .add-padding {
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	margin-top: 0;
 }
+#landing-bg div div {
+	text-align: center;
 
+}
 .posts-container {
 	margin-bottom: 1em;
 }
@@ -65,4 +68,5 @@ div .add-padding {
 	line-height: 3em;
 	text-align: center;
 	color: white;
+
 }
