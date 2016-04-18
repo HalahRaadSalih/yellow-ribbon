@@ -10,29 +10,12 @@
     </div>
 </div>
 <div class="card-panel">
-    <div class="partition">
-        <h4>Top Posts</h4>
-    </div>
-    <div class="container">
-      <div class="row posts-container">
-          <div ng-repeat="item in topPosts">
-              <div class="col s12">
-                  <div class="card-panel add-padding">
-                      <div class="content">
-                          <h4>{{item.title}}</h4>
-                          <p>{{item.body}}</p>
-                          <br>
-                          <p></span>Posted:
-                          <span am-time-ago="item.postedAt | amParse:'YYYY.MM.DD HH:mm:ss'"></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
+
     <div class="partition">
         <h4>About</h4>
     </div>
+    <br>
+    <br>
     <div class="container">
       <div class="row">
 
@@ -90,6 +73,30 @@
         </div>
 
     </div>
+    </div>
+    <br>
+    <br>
+    <div class="partition">
+        <h4>Top Posts</h4>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row posts-container">
+          <div ng-repeat="item in topPosts">
+              <div class="col s12">
+                  <div class="card-panel add-padding">
+                      <div class="content">
+                          <h4>{{item.title}}</h4>
+                          <p>{{item.body}}</p>
+                          <br>
+                          <p></span>Posted:
+                          <span am-time-ago="item.postedAt | amParse:'YYYY.MM.DD HH:mm:ss'"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
     </div>
 
