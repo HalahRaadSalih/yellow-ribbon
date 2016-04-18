@@ -20,3 +20,11 @@ nav .brand-logo, nav ul li a{
   padding: 0.5em 2em;
 
 }
+
+h5{
+  text-align: center;
+}
+
+img.circle.responsive-img{
+  text-align: center;
+}
