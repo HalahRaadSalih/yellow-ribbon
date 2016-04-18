@@ -1,1 +1,8 @@
 /* for the front page! */
+#mainNavbar{
+  background: #262728;
+}
+
+nav .brand-logo, nav ul li a{
+  color: #fdd835;
+}

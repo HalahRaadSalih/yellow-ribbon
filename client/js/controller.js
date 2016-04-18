@@ -68,7 +68,7 @@ myApp.controller('PostingController', function(){
 //
 // ANIMATION
 //
-app.animation('.slide', [function() {
+myApp.animation('.slide', [function() {
     return {
         // make note that other events (like addClass/removeClass)
         // have different function input parameters
