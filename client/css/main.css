@@ -66,3 +66,12 @@ div .add-padding {
 	text-align: center;
 	color: white;
 }
+#searchbar{
+	background-color: #00CC99;
+	height: 25em;
+}
+#searchbar-form{
+	width: 50%;
+	margin-top: 8em;
+	color: #000000;
+}
