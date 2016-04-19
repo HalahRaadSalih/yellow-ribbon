@@ -41,7 +41,10 @@ div .add-padding {
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	margin-top: 0;
 }
+#landing-bg div div {
+	text-align: center;
 
+}
 .posts-container {
 	margin-bottom: 1em;
 }
@@ -64,7 +67,7 @@ div .add-padding {
 	margin-top: 0;
 	line-height: 3em;
 	text-align: center;
-	color: white;
+	color: #262728;
 }
 #searchbar{
 	background-color: #00CC99;
@@ -73,5 +76,6 @@ div .add-padding {
 #searchbar-form{
 	width: 50%;
 	margin-top: 8em;
-	color: #000000;
+	color: #262728;
+
 }

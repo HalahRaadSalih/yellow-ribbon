@@ -1,1 +1,40 @@
 /* for the front page! */
+#mainNavbar, #mainFooter{
+  background: #262728;
+}
+
+nav .brand-logo, nav ul li a{
+  color: #fdd835;
+}
+
+#joinButton{
+  background: #00CC99;
+  text-align: center;
+  border: none;
+  color: #262728;
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+
+}
+
+h5{
+  text-align: center;
+}
+
+img.circle.responsive-img{
+  text-align: center;
+}
+
+
+.greenColor{
+  color: #00CC99;
+
+}
+
+.fa-inverse{
+  color: #262728;
+}
