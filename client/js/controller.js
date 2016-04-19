@@ -58,6 +58,20 @@ myApp.controller('SignupController', function($scope, $location){
 
 myApp.controller('HomeController', function($scope, $location){
 	$scope.title = "Home";
+	$scope.questions = [
+		{
+			profile: "Edward Tierra",
+			content: "I need help talking about ...",
+			time: "03/29/2015 18:24"
+
+		},
+		{
+			profile: "Cairo Stewart",
+			content: "I am a genius and I can't tell anybody about it... help!",
+			time: "02/10/2016 12:06"
+
+		}
+	];
 });
 
 myApp.controller('PostingController', function(){

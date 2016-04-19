@@ -10,16 +10,38 @@
         </center>
     </div>
 </div>
-<div class="row" id="home-questions-answers">
-    <div class="col s3">
-        <h5>recent questions</h5>
-        <br />
-        <h5>recent answers</h5>
+<div class="row">
+    <div class="col s9">
+        <div class="row">
+            <div class="col s4">
+                <h5>Recent Questions</h5>
+            </div>
+            <div class="col s8">
+                <div class="row" style="float:left; display: inline;" id="div-questions" ng-repeat="question in questions">
+                    <div class="col s2">
+                        <img src="http://i.imgur.com/tomFMqls.png" id="profilepic">
+                        <p>{{question.profile}}</p>
+
+                    </div>
+                    <div class="col s10">
+                        <p>{{question.content}}</p>
+                        <p>{{question.time}}</p>
+                    </div>
+                    <div class="col s3 offset-s9">
+                        <a href="#" class="waves-effect waves-light btn">Answer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4">
+                <h5>Recent Answers</h5>
+            </div>
+            <div class="col s8">
+            </div>
+        </div>
     </div>
-    <div class="col s6">
-        Questions for you
-    </div>
     <div class="col s3">
-        <h5>Recommend People</h5>
+        <h5>Recommended People</h5>
     </div>
 </div>

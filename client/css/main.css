@@ -71,11 +71,23 @@ div .add-padding {
 }
 #searchbar{
 	background-color: #00CC99;
-	height: 25em;
+	height: 15em;
 }
 #searchbar-form{
 	width: 50%;
 	margin-top: 8em;
 	color: #262728;
 
+}
+#profilepic{
+	
+}
+#div-questions{
+	margin-top: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
 }
